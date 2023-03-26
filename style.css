@@ -1,0 +1,296 @@
+:root {
+  --off-white: #f3f3f4;
+  --pink-1: #e74d8b;
+  --pink-2: #f5b8d0;
+  --pink-3: #fdedf3;
+  --pink-4: #ed82ad;
+  --pink-5: #b93e6f;
+  --blue: #2c72e6;
+  --link-blue-u: #523ac7;
+  --link-blue-i: #7462d2;
+  --link-blue-active: #412f9f;
+  --black: #000;
+  --white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  margin: 3em auto 3em auto;
+  max-width: 415px;
+}
+
+main {
+  display: block;
+}
+
+.section-left {
+  display: none;
+}
+
+.cntr-main {
+  width: clamp(320px, 100%, 415px);
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.title-main {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.769em;
+}
+
+.authenticator-btn-ctnr {
+  display: flex;
+  gap: 1em;
+}
+
+.btn {
+  padding: 0.85em;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 0.3em;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.authenticator-btn {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.google-login-btn {
+  flex: 0.8;
+  background-color: var(--blue);
+  color: var(--white);
+  min-width: 200px;
+}
+
+.google-login-btn img {
+  max-width: 20px;
+}
+
+.google-login-btn:hover {
+  background-color: #5e94ec;
+  transition: all 200ms ease-in-out;
+}
+
+.google-login-btn:active,
+.google-login-btn:focus {
+  background-color: #709fee;
+  transition: all 200ms ease-in-out;
+}
+
+.twitter-login-btn {
+  flex: 0.2;
+}
+
+.twitter-login-btn:hover {
+  background-color: #e5e5e5;
+  transition: all 200ms ease-in-out;
+}
+
+.twitter-login-btn:active,
+.twitter-login-btn:focus {
+  background-color: #d9d9d9;
+  transition: all 200ms ease-in-out;
+}
+
+.separator {
+  margin: 3em 0;
+  border-top: 2px solid var(--off-white);
+  position: relative;
+  z-index: 1;
+}
+
+.separator::after {
+  content: "Or";
+  text-align: center;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  font-size: 1.5rem;
+  background-color: var(--white);
+  padding: 0 1em;
+}
+
+.form-label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.444em;
+}
+
+.password-label-ctnr {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.forgot-pwd-link {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.form-input-box {
+  width: 100%;
+  display: block;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 400;
+  padding: 0.85em;
+  border-radius: 0.3em;
+  border: none;
+  background-color: var(--off-white);
+  margin-bottom: 1.667em;
+  border: 1px solid var(--white);
+  transition: all 100ms ease-in-out;
+  outline: 1px solid transparent;
+}
+
+.form-input-box:hover {
+  border: 1px solid #e5e5e5;
+  background-color: var(--white);
+  outline: 4px solid var(--pink-3);
+}
+
+.form-input-box:focus {
+  border: 1px solid var(--pink-2);
+  outline: 4px solid var(--pink-3);
+  background-color: var(--white);
+}
+
+.form-input-box:active {
+  border: 1px solid #e5e5e5;
+  outline: 1px solid transparent;
+  background-color: var(--white);
+}
+
+.sign-in-btn {
+  background-color: var(--pink-1);
+  color: var(--white);
+  width: 100%;
+  margin-bottom: 1.333em;
+  transition: 100ms all ease-in-out;
+}
+
+.sign-in-btn:hover {
+  background-color: var(--pink-4);
+}
+
+.sign-in-btn:active {
+  background-color: var(--pink-5);
+}
+
+.sign-up-link {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: inherit;
+}
+
+.sign-up-link a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-blue-i);
+}
+
+a:active {
+  color: var(--link-blue-active);
+}
+
+@media (min-width: 960px) {
+  header {
+    position: relative;
+    position: absolute;
+  }
+
+  #logo-main {
+    opacity: 0.5;
+    transition: 100ms all ease-in-out;
+  }
+
+  #logo-main:hover {
+    opacity: 0.8;
+  }
+
+  #logo-main:active {
+    opacity: 1;
+  }
+
+  main {
+    display: flex;
+  }
+
+  .section-left {
+    height: 100vh;
+    display: block;
+    flex: 0.463;
+    background-image: url("images/backdrop2.png");
+    background-size: cover;
+    background-position: right;
+    object-fit: contain;
+  }
+
+  .section-left div {
+    padding: 5em;
+  }
+
+  .section-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .header-cntr-main {
+    margin-left: 3em;
+    position: absolute;
+    top: 50px;
+  }
+
+  .sidebar-title {
+    margin-top: 2em;
+    font-size: max(2.5rem, 1.8vw + 1rem);
+    color: #7a5060;
+  }
+
+  .section-left p {
+    font-size: 1.6rem;
+    color: black;
+    position: fixed;
+    top: 900px;
+  }
+
+  .section-left p span {
+    text-decoration: underline;
+  }
+
+  .sign-up-link {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+  }
+}
